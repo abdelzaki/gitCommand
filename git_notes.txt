@@ -1,0 +1,111 @@
+- git:
+	- git is a version control system
+	- it allows scalling of the project, and working in team
+	- you can add extension to visual studio code 
+
+- configuraion:
+	- we need to condigure name email
+	- system:
+		- all user of computer
+	- global:
+		- all repo for the user
+	- local:
+		- this repo for this user 
+
+	- commands:
+		- git config --global user.name " "
+			- we use this command to store the user name
+		- git config --global user.email " "
+			- we use this command to store the email 
+		- git config --global core.editor "code --wait"
+			- hier we decide that the default editor is vscode
+		- git config --global -e
+			- here we open the configuration file using our default editor 
+
+- steps:
+	- git init
+		- this initialize the folder to be used 
+	- git status:
+		- it is used to get the status of the folder we are in
+
+- workflow:
+	- git add "name of files"
+		- this add files to stage area. 
+		- it add a specific version of the file to the staging area. if u changed the file again this changes are not included until u make git add again
+
+	- git restore --staged "name of file":
+		- would remove the file from staging area and return the file from git to staging area the working still changed 
+		- it is the reverse the work of git add
+
+	- git restore:
+		- would return the file from the git to the working area
+
+	- git restore --source =Head~1 file.txt:
+		- restore the file from last version
+
+	- git commit -m "comment"
+		- to make the change permanent
+		- u can write git commit without -m then the default edior would be opened 
+
+	- git commit -a
+		- this would add the changed files and would ask you to enter the comments
+
+	- git rm:
+		- would remove the file from system and staging area
+
+	- git rm --cached -r "name of file":
+		- remove the file from staging area
+		- as if we never called git add
+
+	- git mv "name of file" "destionation":
+		- would move the file 
+
+	- .gitignore:
+		- this file contain the file we want to ignore
+
+	- git status -s:
+		- git the status in short form
+	
+	- git diff:
+		- show the changes
+
+	- git log:
+		- would show me the all commands
+
+	-  git show Head:
+		- would show the last commit
+
+- branch and master:
+	- Head point to what we have checked
+
+	- git branch "name of the branch"
+		- would create new branch
+
+	- git branch:
+		- would show us where we are
+
+	- git log --all --decorate --oneline --graph
+		- would create log to see where we are
+
+	- git check "name of the branch":
+		- check out the branch
+
+	- git checkout master; git merge name of the branch 
+		- to change the master to a branch
+		- and merge it to the master
+
+	- git branch --merged:
+		- would show the merged branched
+
+	- git branch -d "name of the branch":
+		- would delete the branch after merging
+
+	- git checkout "commit number":
+		- we check a specific commit 
+		- we can checkout this commit to make a new branch
+
+	- git stash:
+		- would store temperoray the changed without commit 
+		
+	- git stash pop:
+		- return to the stash point
